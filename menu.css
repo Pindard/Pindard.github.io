@@ -1,0 +1,48 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+ul li a {
+
+
+
+}
+
+
+ul {
+    border: 15px solid rgb(246, 185, 44);
+    background-color: rgb(246, 185, 44);
+
+
+
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 400px;
+    padding: 5px;
+    
+
+}
+
+.nav a {
+    text-decoration: none;
+    margin: left;
+    font-size: large;
+    font-weight:bolder;
+    padding: 16px;
+    border-radius: 16px;
+
+}
+
+.nav li :hover {
+background-color:rgb(222, 166, 37);
+
+
+}
