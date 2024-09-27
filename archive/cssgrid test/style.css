@@ -16,8 +16,6 @@ html,body {
         'menu   main   main   main   main   main   main   main   main   main   main   main   main   main'
         'menu   footer footer footer footer footer footer footer footer footer footer footer footer footer';
 
-
-
 }
 
 .grid-container > div {
@@ -87,4 +85,18 @@ nav ul li a:hover {
     background-color: 
     rgb(119, 50, 132);
 
+}
+
+@media screen and (max-width: 800px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        'header'
+        'menu'
+        'main'
+        'footer';
+    }
+    
 }

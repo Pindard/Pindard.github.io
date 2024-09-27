@@ -1,0 +1,32 @@
+body{
+    background-color: #432a75;
+
+
+}
+
+iframe{
+    
+    
+}
+
+a{
+    color: red;
+    text-decoration: none;
+}
+
+a:visited{
+    color: darkred;
+    text-decoration: none;
+
+}
+
+a:hover{
+    color: red;
+    text-decoration: none;
+
+}
+
+a:active{
+    color: red;
+    text-decoration: none;
+}
