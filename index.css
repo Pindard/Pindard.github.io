@@ -162,7 +162,12 @@ nav ul li a:hover {
         display: flex;
         text-align: center;
         align-items: center;
-        font-size: 2rem;
+        font-size: 1.8rem;
+
+    }
+
+    .header h1 {
+        margin-top: 80px;
 
     }
 
