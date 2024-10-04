@@ -64,3 +64,23 @@ nav ul li a:hover {
     background-color: rgba(51, 61, 99, 0.862)
 
 }
+
+/*Dette endrer nettsiden når oppløsningen er 800px eller mindre (telefon) */
+@media screen and (max-width: 800px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        'menu'
+        'header'
+        'main'
+        'footer';
+    }
+
+    .menu {
+        justify-content: center;
+
+    }
+}
+    
