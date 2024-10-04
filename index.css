@@ -162,6 +162,7 @@ nav ul li a:hover {
         display: flex;
         text-align: center;
         align-items: center;
+        font-size: 2rem;
 
     }
 
