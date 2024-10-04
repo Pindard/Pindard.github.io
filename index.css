@@ -11,6 +11,8 @@ html, body {
 
 .grid-container {
     display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto auto auto auto;
     grid-template-areas:
     'menu   menu   menu   menu   menu'
     'header header header header header'
@@ -27,16 +29,15 @@ html, body {
 .menu {
     width: auto;
     height: 76px;
-    background-color: rgba(45,44,67,255);
+    margin: 0;
+    padding: 0;
+    background-color: rgb(8, 15, 44);
     color: white;
     font-size: 28px;
 
-    margin: 0;
-    padding: 0;
-
     display: flex;
     text-align: center;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 
 }
@@ -46,6 +47,7 @@ nav ul {
     padding: 0;
     display: flex;
     flex-direction: row;
+    margin-left: 30px;
 
 }
 
@@ -59,37 +61,79 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: rgb(42, 52, 93);
-    border-bottom: 5px;
+    background-color: rgba(51, 61, 99, 0.862)
 
 }
 
 .header {
     width: auto;
-    height: 650px;
-    background-image: url(bilder/mountains-1412683_1920.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    color: white;    
+    height: 630px;
     margin: 0;
     padding: 20px;
+
+    background: rgb(182,182,221);
+    background: linear-gradient(0deg, rgba(182,182,221,1) 62%, rgba(148,161,233,1) 100%);
+    
+
+
+    color: white;
+    font-size: 2.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    text-align: start;
+
+
+}
+
+.header h1 {
+    margin: 40px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    border: 3px;
+    border-style: solid;
+
+}
+
+.header p {
+    width: 720px;
+    margin: 40px;
+    margin-top: 0;
+    margin-bottom: 150px;
+    padding: 10px;
+
+    font-size: 1.8rem;
+
+    display: flex;
+    border: 3px;
+    border-style: solid;
 
 }
 
 .main {
     width: auto;
     height: 800px;
-    background-color: rgb(8, 15, 44);
-    color: white;
-
     margin: 0;
     padding: 20px;
+    background-color: rgb(7, 13, 40);
+    color: white;
+
+}
+
+.main h1 {
+    font-size: 2rem;
+
 }
 
 .footer {
-    background-color: rgb(34, 32, 32);
+    width: auto;
+    height: 40px;
+    margin: 0;
+    padding: 20px;
+    background-color: rgb(6, 13, 40);
     text-align: center;
     color: white;
 
@@ -99,11 +143,30 @@ nav ul li a:hover {
 @media screen and (max-width: 800px) {
     .grid-container {
         display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
         grid-template-areas: 
         'menu'
         'header'
         'main'
         'footer';
+    }
+
+    .menu {
+        justify-content: center;
+
+    }
+
+    .header {
+        text-align: center;
+        align-items: center;
+
+    }
+
+    .header p {
+        margin-bottom: 50px;
+        width: auto;
+    
     }
 
 }
