@@ -32,8 +32,10 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: rgb(8, 15, 44);
+   
     color: white;
     font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
 
     display: flex;
     text-align: center;
@@ -57,11 +59,36 @@ nav ul li a {
     padding: 20px;
     display: block;
     border: 5px;
+    border-radius: 12px;
 
 }
 
 nav ul li a:hover {
-    background-color: rgba(51, 61, 99, 0.862)
+    background-color: rgba(43, 52, 87, 0.862)
+    
+
+}
+
+.header {
+    width: auto;
+    height: 630px;
+    margin: 0;
+    padding: 20px;
+
+    background: rgb(182,182,221);
+    background: linear-gradient(0deg, rgba(182,182,221,1) 62%, rgba(148,161,233,1) 100%);
+    
+
+
+    color: white;
+    font-size: 2.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    text-align: start;
+
 
 }
 
@@ -83,3 +110,4 @@ nav ul li a:hover {
 
     }
 }
+    
