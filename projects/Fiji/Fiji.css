@@ -71,13 +71,13 @@ nav ul li a:hover {
 
 .header {
     width: auto;
-    height: 630px;
+    height: 670px;
     margin: 0;
 
     color: yellow;
     font-size: 4rem;
 
-    background-image: url(..///Fiji/Fiji\ background.jpg);
+    background-image: url(..//Fiji/images/Fiji\ background.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -90,20 +90,20 @@ nav ul li a:hover {
 
 .main {
     width: auto;
-    height: 800px;
+    height: auto;
     margin: 0;
-    padding: 60px;
-    background-color: rgb(7, 13, 40);
+    padding: 40px;
+
+    background-color:rgb(209, 165, 117);
    
     color: white;
     font-family: arial;
     line-height: 1.5;
     
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-
-
+    justify-content: space-evenly;
 
 }
 
@@ -130,6 +130,30 @@ nav ul li a:hover {
 
 }
 
+#reasons {
+    height: auto;
+    width: 2000px;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.beaches, .snorkling, .islandjumping, .hiking {
+    width: 640px;
+    margin: 0px;
+    margin-top: 20px;
+    padding: 20px;
+
+    border-radius: 2rem;
+    border: solid;
+    background-color: rgb(111, 178, 187);
+    border-color: rgb(255, 255, 255);
+
+
+}
+
 .footer {
     width: auto;
     margin: 0;
@@ -151,10 +175,37 @@ img {
     max-height: 100%;
 
     margin: 10px;
-    float: inline-block;
-    
+    display: inline-block;
+}
 
+.shellfish {
+    max-width: 50%;
+    max-height: 50%;
+    margin: 0;
+    margin-right: 15px;
 
+    border-radius: 1rem;
+    float: right;
+
+}
+
+#sailboat {
+    max-width: 50%;
+    max-height: 55%;
+    margin: 0;
+    margin-right: 15px;
+
+    border-radius: 1rem;
+    float: right;
+
+}
+
+.palmetre {
+    margin: 50px;
+    max-width: 40%;
+    max-height: 40%;
+
+    border-radius: 0.5rem;
 }
 
 /*Dette endrer nettsiden når oppløsningen er 800px eller mindre (telefon) */
