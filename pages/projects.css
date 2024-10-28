@@ -112,6 +112,7 @@ nav ul li a:hover {
 .flex-container :hover {
     box-shadow: 0 4px 15px rgb(132, 134, 163);
     border-color: rgb(125, 127, 152);
+    transform: scale(1.03);
 
 }
 
