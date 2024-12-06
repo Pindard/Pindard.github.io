@@ -4,7 +4,8 @@ html, body {
     width: 100%;
 }
 
-ul li {
-    list-style: none;
+#bucketlist {
+    list-style: decimal;
 
 }
+
