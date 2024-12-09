@@ -1,4 +1,4 @@
-//definerer myGoals og myGoals verdier i localStorage
+//definerer myGoals variabel og setter myGoals verdier i localStorage
 let myGoals = [
     "Hoppe fallskjerm", 
     "Kjøpe og mekke på Motorsykkel", 
@@ -6,11 +6,11 @@ let myGoals = [
     "Være med i en Ironman film"
 ];
 
-// localStorage.setItem('goals', JSON.stringify(myGoals));
+localStorage.setItem('goals', JSON.stringify(myGoals));
 
 //pakker informasjon ut av local storage og definerer som storedGoals (for å sikre at info er lagret lokalt)
-// let storedGoals = JSON.parse(localStorage.getItem('goals'));
-// console.log(storedGoals)
+let storedGoals = JSON.parse(localStorage.getItem('goals'));
+console.log(storedGoals)
 
 //funksjon som printer ut verdien til storedGoals
 function updateBucketlist() {
@@ -22,10 +22,9 @@ function updateBucketlist() {
     }
 }
 
-
 updateBucketlist();
 
-//Lage skrivefelt og knapp som kan legge til nye goals inn i localStorage og myGoals
+//Skrivefelt og knapp som kan legge til nye Goals til bucketlisten
 document.getElementById("skjema").addEventListener("submit", submitGoal);
 
 function submitGoal(event) {
@@ -33,12 +32,16 @@ function submitGoal(event) {
 
     let goalInputValue = document.getElementById("goalInput").value;
     if (goalInputValue === "") {
-        console.log("empty input")
+        alert("Empty input")
     } else {
     myGoals.push(goalInputValue);
     console.log(myGoals)
+
     updateBucketlist();
+    localStorage.setItem('goals', JSON.stringify(myGoals));
+
     
+
     
 }
 }
