@@ -41,8 +41,8 @@ function submitGoal(event) {
     localStorage.setItem('goals', JSON.stringify(myGoals));
 
     
+    //Husk at ting ikke ble lagret på local storage og local storage arrayen (myGoals) må kunne oppdateres dynamisk
 
-    
 }
 }
 
