@@ -6,25 +6,71 @@ let myGoals = [
     "Være med i en Ironman film"
 ];
 
-localStorage.setItem('goals', JSON.stringify(myGoals));
+// localStorage.setItem('goals', JSON.stringify(myGoals));
 
 //pakker informasjon ut av local storage og definerer som storedGoals (for å sikre at info er lagret lokalt)
-let storedGoals = JSON.parse(localStorage.getItem('goals'));
-console.log(storedGoals)
+// let storedGoals = JSON.parse(localStorage.getItem('goals'));
+// console.log(storedGoals)
 
 //funksjon som printer ut verdien til storedGoals
 function updateBucketlist() {
     document.getElementById("bucketlist").innerText = "";
-    for (i = 0; i < storedGoals.length; ++i) {
+    for (i = 0; i < myGoals.length; ++i) {
         let li = document.createElement('li');
-        li.innerText = storedGoals[i];
+        li.innerText = myGoals[i];
         document.getElementById("bucketlist").appendChild(li);
     }
 }
 
+
+updateBucketlist();
+
 //Lage skrivefelt og knapp som kan legge til nye goals inn i localStorage og myGoals
-let bucketItem = "Bli pilot";
-storedGoals.push(bucketItem);
+document.getElementById("skjema").addEventListener("submit", submitGoal);
+
+function submitGoal(event) {
+    event.preventDefault(); // SPA single page application
+
+    let goalInputValue = document.getElementById("goalInput").value;
+    if (goalInputValue === "") {
+        console.log("empty input")
+    } else {
+    myGoals.push(goalInputValue);
+    console.log(myGoals)
+    updateBucketlist();
+    
+    
+}
+}
+
+
+
+
+//let bucketItem = "Bli pilot";
+//storedGoals.push(bucketItem);
+//updateBucketlist();
+
+
+// document.getElementById("goalSubmit").addEventListener('click', () => {
+//     console.log("test");
+// });
+
+// document.getElementById("goalSubmit").addEventListener('click', function() {
+//     console.log("test");
+// });
+
+//let goalInput = document.getElementById("goalInput");
+//let goalSubmit = document.getElementById("goalSubmit");
+
+//goalSubmit.addEventListener("click", ()
+
+
+
+
+
+
+//let goalInputValue = goalInput.value;
+//console.log(goalInputValue);
 
 
 // Lag et tekstfelt, og en knapp, fyll inn i ...
