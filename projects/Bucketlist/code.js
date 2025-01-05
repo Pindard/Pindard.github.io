@@ -1,3 +1,20 @@
+// Starter funksjon som Skriver alle goals som er lagret i localStorage når nettsiden starter (onload)
+window.onload = loadSavedGoals;
+
+function loadSavedGoals() {
+
+//Sjekker om det er noen lagrede goals i localStorage
+let storedGoals = JSON.parse(localStorage.getItem("goals") || "[]");
+
+// Skriver goals på siden
+document.getElementById("bucketlist").innerText = "";
+    for (i = 0; i < storedGoals.length; ++i) {
+        let li = document.createElement('li');
+        li.innerText = storedGoals[i];
+        document.getElementById("bucketlist").appendChild(li);
+    }
+}
+
 
 document.getElementById("goalSubmitButton").addEventListener("click", updateBucketlist);
 
@@ -197,3 +214,4 @@ document.getElementById("bucketlist").innerText = "";
 // https://www.geeksforgeeks.org/how-to-creating-html-list-from-javascript-array/
 // https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 // https://www.shecodes.io/athena/41313-how-to-apply-a-function-to-a-specific-button-in-javascript
+// https://www.w3schools.com/jsreF/event_onload.asp
