@@ -3,7 +3,7 @@ let myGoals = [
     "Hoppe fallskjerm", 
     "Kjøpe og mekke på Motorsykkel", 
     "Kjøpe en 991.2 Porsche GT3RS", 
-    "Være med i en Ironman film"wep
+    "Være med i en Ironman film"
 ];
 
 myGoals.push(storedGoals); //Skriver opp lagrede goals fra localStorage inn i listen
