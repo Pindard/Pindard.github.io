@@ -8,13 +8,23 @@
     <script src="code.js" defer></script>
 </head>
 <body>
-    <h1>Bucketlist</h1>
-        <form id="skjema">
-            <input type="text" name="goalInput" id="goalInput" autocomplete="off">
-            <input type="submit" id="goalSubmitButton" value="Submit">
-        </form>
+    <div id="top">
+        <h1 id="title">Bucketlist</h1>
+
+        <div id="listEditor">
+            <form id="skjema">
+                <input type="text" name="goalInput" id="goalInput" autocomplete="off">
+                <input type="submit" id="goalSubmitButton" value="Submit">
+            </form>
+        </div>
         
-        <ul id="bucketlist"></ul>
+        <div id="listSpace">
+            <ul id="bucketlist"></ul>
+        </div>
+
         
+
+
+    </div>
 </body>
 </html>

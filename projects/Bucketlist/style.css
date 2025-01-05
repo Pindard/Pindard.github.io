@@ -4,8 +4,45 @@ html, body {
     width: 100%;
 }
 
+#top {
+    padding-top: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border: solid red 10px;
+}
+
 #bucketlist {
     list-style: decimal;
+
+}
+
+#title {
+    font-size: 4rem;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+#listEditor {
+    width: 1000px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid greenyellow 10px;
+
+}
+
+#listSpace {
+    padding: 10px;
+    width: 500px;
+    height: auto;
+
+    border: solid blue 10px;
 
 }
 

@@ -1,46 +1,97 @@
-//definerer myGoals variabel og setter myGoals verdier i localStorage
-let myGoals = [
-    "Hoppe fallskjerm", 
-    "Kjøpe og mekke på Motorsykkel", 
-    "Kjøpe en 991.2 Porsche GT3RS", 
-    "Være med i en Ironman film"
-];
 
-myGoals.push(storedGoals); //Skriver opp lagrede goals fra localStorage inn i listen
-localStorage.setItem('goals', JSON.stringify(myGoals));
+document.getElementById("goalSubmitButton").addEventListener("click", updateBucketlist);
 
-//pakker informasjon ut av local storage og definerer som storedGoals (for å sikre at info er lagret lokalt)
-let storedGoals = JSON.parse(localStorage.getItem('goals'));
-console.log("Her er lagrede goals: " + storedGoals)
+function updateBucketlist(event) {
 
-//funksjon som printer ut verdien til storedGoals
-function updateBucketlist() {
-    document.getElementById("bucketlist").innerText = "";
-    for (i = 0; i < myGoals.length; ++i) {
+//Hindrer standard skjema-ting
+event.preventDefault();
+
+// henter nye goals fra inputboksen
+let newGoal = document.getElementById("goalInput").value;
+
+// Passer på at det er "1" goals key i localStorage og at den er en array
+if(localStorage.getItem("goals") == null){
+    localStorage.setItem("goals", "[]");
+}
+
+// Henter gamle goals og skriver de inn i nye goals
+let storedGoals = JSON.parse(localStorage.getItem("goals") || "[]");
+storedGoals.push(newGoal);
+
+// lagre gamle og nye goals i localStorage
+localStorage.setItem("goals", JSON.stringify(storedGoals));
+
+//printer ut verdien til storedGoals
+
+document.getElementById("bucketlist").innerText = "";
+    for (i = 0; i < storedGoals.length; ++i) {
         let li = document.createElement('li');
-        li.innerText = myGoals[i];
+        li.innerText = storedGoals[i];
         document.getElementById("bucketlist").appendChild(li);
     }
 }
 
-updateBucketlist();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//definerer myGoals variabel og setter myGoals verdier i localStorage
+//let myGoals = [
+//    "Hoppe fallskjerm", 
+//    "Kjøpe og mekke på Motorsykkel", 
+//    "Kjøpe en 991.2 Porsche GT3RS", 
+//    "Være med i en Ironman film"
+//];
+
+//myGoals.push(storedGoals); //Skriver opp lagrede goals fra localStorage inn i listen
+//localStorage.setItem('goals', JSON.stringify(myGoals));
+
+//pakker informasjon ut av local storage og definerer som storedGoals (for å sikre at info er lagret lokalt)
+//let storedGoals = JSON.parse(localStorage.getItem('goals'));
+//console.log("Her er lagrede goals: " + storedGoals)
+
+//funksjon som printer ut verdien til storedGoals
+//function updateBucketlist() {
+//    document.getElementById("bucketlist").innerText = "";
+//    for (i = 0; i < myGoals.length; ++i) {
+//        let li = document.createElement('li');
+//        li.innerText = myGoals[i];
+//        document.getElementById("bucketlist").appendChild(li);
+//    }
+//}
+
+//updateBucketlist();
 
 //Skrivefelt og knapp som kan legge til nye Goals til bucketlisten
-document.getElementById("skjema").addEventListener("submit", submitGoal);
+//document.getElementById("skjema").addEventListener("submit", submitGoal);
 
-function submitGoal(event) {
-    event.preventDefault(); // SPA single page application
+//function submitGoal(event) {
+//    event.preventDefault(); // SPA single page application
 
-    let goalInputValue = document.getElementById("goalInput").value;
-    if (goalInputValue === "") {
-        alert("Empty input")
-    } else {
-    myGoals.push(goalInputValue);
+//    let goalInputValue = document.getElementById("goalInput").value;
+//    if (goalInputValue === "") {
+//        alert("Empty input")
+//    } else {
+//    myGoals.push(goalInputValue);
 
-    updateBucketlist();
-    localStorage.setItem('goals', JSON.stringify(myGoals));
-}
-}
+//    updateBucketlist();
+//    localStorage.setItem('goals', JSON.stringify(myGoals));
+//}
+//}
    
     //Husk at ting ikke ble lagret på local storage og local storage arrayen (myGoals) må kunne oppdateres dynamisk
 
@@ -142,4 +193,7 @@ function submitGoal(event) {
 //     }
 // </script>
 // </body>
-// sources: https://www.geeksforgeeks.org/how-to-creating-html-list-from-javascript-array/
+// sources: 
+// https://www.geeksforgeeks.org/how-to-creating-html-list-from-javascript-array/
+// https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+// https://www.shecodes.io/athena/41313-how-to-apply-a-function-to-a-specific-button-in-javascript
