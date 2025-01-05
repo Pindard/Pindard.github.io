@@ -102,8 +102,15 @@ nav ul li a:hover {
 }
 
 .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     min-height: 100px;
 
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgb(194, 202, 237);
     background-color: rgb(8, 15, 44);
 
 }
