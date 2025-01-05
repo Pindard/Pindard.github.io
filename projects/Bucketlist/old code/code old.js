@@ -26,7 +26,7 @@ event.preventDefault();
 // henter nye goals fra inputboksen
 let newGoal = document.getElementById("goalInput").value;
 
-// Passer på at det er "1" goals key i localStorage og at det er en array
+// Passer på at det er "1" goals key i localStorage og at den er en array
 if(localStorage.getItem("goals") == null){
     localStorage.setItem("goals", "[]");
 }
@@ -49,28 +49,6 @@ document.getElementById("bucketlist").innerText = "";
 }
 
 
-
-
-
-
-
-
-          //Dette er koden jeg holder på å lage for å dele liisten opp i for at den ikke skal bli for lang.            (Problem er at bucketlist2 kommer til å starte på 1.)
-//if(storedGoals.length < 15) {
-//    document.getElementById("bucketlist").innerText = "";
-//    for (i = 0; i < storedGoals.length; ++i) {
-//        let li = document.createElement('li');
-//        li.innerText = storedGoals[i];
-//        document.getElementById("bucketlist").appendChild(li);
-//    }
-//} else {
-//    document.getElementById("bucketlist2").innerText = "";
-//    for (i = 15; i < storedGoals.length; ++i) {
-//        let li = document.createElement('li');
-//        li.innerText = storedGoals[i];
-//        document.getElementById("bucketlist2").appendChild(li);
-//    }
-//}
 
 
 
@@ -237,4 +215,3 @@ document.getElementById("bucketlist").innerText = "";
 // https://www.w3schools.com/js/js_htmldom_eventlistener.asp
 // https://www.shecodes.io/athena/41313-how-to-apply-a-function-to-a-specific-button-in-javascript
 // https://www.w3schools.com/jsreF/event_onload.asp
-// https://www.digitalocean.com/community/tutorials/how-to-work-with-strings-in-javascript
