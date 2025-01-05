@@ -3,14 +3,15 @@ let myGoals = [
     "Hoppe fallskjerm", 
     "Kjøpe og mekke på Motorsykkel", 
     "Kjøpe en 991.2 Porsche GT3RS", 
-    "Være med i en Ironman film"
+    "Være med i en Ironman film"wep
 ];
 
+myGoals.push(storedGoals); //Skriver opp lagrede goals fra localStorage inn i listen
 localStorage.setItem('goals', JSON.stringify(myGoals));
 
 //pakker informasjon ut av local storage og definerer som storedGoals (for å sikre at info er lagret lokalt)
 let storedGoals = JSON.parse(localStorage.getItem('goals'));
-console.log(storedGoals)
+console.log("Her er lagrede goals: " + storedGoals)
 
 //funksjon som printer ut verdien til storedGoals
 function updateBucketlist() {
@@ -35,16 +36,14 @@ function submitGoal(event) {
         alert("Empty input")
     } else {
     myGoals.push(goalInputValue);
-    console.log(myGoals)
 
     updateBucketlist();
     localStorage.setItem('goals', JSON.stringify(myGoals));
-
-    
+}
+}
+   
     //Husk at ting ikke ble lagret på local storage og local storage arrayen (myGoals) må kunne oppdateres dynamisk
 
-}
-}
 
 
 
